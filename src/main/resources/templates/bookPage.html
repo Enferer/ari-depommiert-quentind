@@ -1,0 +1,46 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html
+        xmlns="http://www.w3.org/1999/xhtml"
+        xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+<div th:replace="fragment/header"></div>
+<table class="table">
+    <thead>
+    <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Author id</th>
+    </tr>
+    </thead>
+    <tbody>
+    <th:block
+            th:each="book : ${books}">
+        <tr>
+            <td th:text="${book.getTitle()}"></td>
+            <td th:text="${book.getAuthorId()}"></td>
+            <td>
+                <form action="/books/delete" method="post">
+                    <input type="hidden" name="id" th:value="${book.getId()}">
+                    <input type="hidden" name="title" th:value="${book.getTitle()}">
+                    <input type="hidden" name="authorId" th:value="${book.getAuthorId()}">
+                    <button type="submit">Supprimer</button>
+                </form>
+            </td>
+        </tr>
+    </th:block>
+    <form action="/books" method="post">
+        <tr>
+            <td><input type="text" name="title"></td>
+            <td><input type="text" name="authorId"></td>
+            <td><button type="submit">Ajouter</button></td>
+        </tr>
+    </form>
+    </tbody>
+</table>
+</body>
+</html>
