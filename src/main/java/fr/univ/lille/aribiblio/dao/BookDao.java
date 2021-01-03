@@ -1,6 +1,6 @@
-package fr.univ.lille.aridepommiert.dao;
+package fr.univ.lille.aribiblio.dao;
 
-import fr.univ.lille.aridepommiert.model.Book;
+import fr.univ.lille.aribiblio.model.Book;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

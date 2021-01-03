@@ -1,4 +1,4 @@
-package fr.univ.lille.aridepommiert.model;
+package fr.univ.lille.aribiblio.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

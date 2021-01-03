@@ -1,7 +1,7 @@
-package fr.univ.lille.aridepommiert.service;
+package fr.univ.lille.aribiblio.service;
 
-import fr.univ.lille.aridepommiert.dao.BookDao;
-import fr.univ.lille.aridepommiert.model.Book;
+import fr.univ.lille.aribiblio.model.Book;
+import fr.univ.lille.aribiblio.dao.BookDao;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

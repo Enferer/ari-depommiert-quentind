@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fr.univ.lille</groupId>
-	<artifactId>ari-depommiert</artifactId>
+	<artifactId>ari-biblio</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>ari-depommiert</name>
+	<name>ari-biblio</name>
 	<description>Bibliothéque</description>
 
 	<properties>
@@ -19,6 +19,10 @@
 	</properties>
 
 	<dependencies>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
@@ -62,7 +66,7 @@
 			<groupId>org.flywaydb</groupId>
 			<artifactId>flyway-core</artifactId>
 		</dependency>
-	</dependencies>
+    </dependencies>
 
 	<build>
 		<plugins>

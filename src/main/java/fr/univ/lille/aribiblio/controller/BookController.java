@@ -1,7 +1,7 @@
-package fr.univ.lille.aridepommiert.controller;
+package fr.univ.lille.aribiblio.controller;
 
-import fr.univ.lille.aridepommiert.model.Book;
-import fr.univ.lille.aridepommiert.service.BookService;
+import fr.univ.lille.aribiblio.model.Book;
+import fr.univ.lille.aribiblio.service.BookService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;

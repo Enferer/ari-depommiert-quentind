@@ -1,7 +1,7 @@
-package fr.univ.lille.aridepommiert.controller;
+package fr.univ.lille.aribiblio.controller;
 
-import fr.univ.lille.aridepommiert.model.Author;
-import fr.univ.lille.aridepommiert.service.AuthorService;
+import fr.univ.lille.aribiblio.model.Author;
+import fr.univ.lille.aribiblio.service.AuthorService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;

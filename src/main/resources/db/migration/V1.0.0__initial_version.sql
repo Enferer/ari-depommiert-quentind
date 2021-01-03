@@ -17,3 +17,12 @@ create table t_book
     constraint pk_t_book primary key (id),
     constraint fk_t_author_book foreign key (author_id) references t_author(id)
 );
+
+create sequence seq_user;
+create table t_user
+(
+    id               integer         not null  default nextval('seq_user'),
+    name             varchar(50)     not null,
+    password         varchar         not null,
+    constraint pk_t_user primary key (id)
+);
