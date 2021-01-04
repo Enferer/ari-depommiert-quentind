@@ -26,6 +26,15 @@ public class BookService {
     }
 
     public void deleteBook(Book book){
-        bookDao.delete(book);
+        try{
+            bookDao.delete(book);
+        }catch (Exception e){
+
+        }
+
+    }
+
+    public Book getById(Integer bookId) {
+        return bookDao.findById(bookId).get();
     }
 }

@@ -29,6 +29,7 @@ public class BookController {
 
     @PostMapping
     public String createBook(Book book){
+        if(book.getAuthorId() ==null || book.getTitle() == null) return "redirect:/books";
         this.bookService.createBook(book);
         return "redirect:/books";
     }

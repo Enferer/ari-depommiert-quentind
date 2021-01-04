@@ -28,7 +28,13 @@
                     <input type="hidden" name="id" th:value="${book.getId()}">
                     <input type="hidden" name="title" th:value="${book.getTitle()}">
                     <input type="hidden" name="authorId" th:value="${book.getAuthorId()}">
-                    <button type="submit">Supprimer</button>
+                    <button type="submit">Delete</button>
+                </form>
+            </td>
+            <td>
+                <form action="/rented" method="post">
+                    <input type="hidden" name="bookId" th:value="${book.getId()}">
+                    <button type="submit">Rent</button>
                 </form>
             </td>
         </tr>

@@ -29,16 +29,17 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
         http.csrf().disable()
                 .authorizeRequests()
                 .antMatchers("/","/auth/**","/auth","/h2/**").permitAll()
-                .antMatchers("/authors ","/books").hasAnyRole("USER")
+                .antMatchers("/authors","/books","/rented").hasAnyRole("USER")
                 .anyRequest().authenticated()
-                .and().csrf().ignoringAntMatchers("/h2/**","/auth/**")
+                .and().csrf().ignoringAntMatchers("/h2/**","/auth/**","/rented")
                 .and().headers().frameOptions().sameOrigin()
                 .and()
                 .formLogin()
                 .permitAll()
                 .and()
                 .logout()
-                .permitAll();
+                .permitAll()
+                .and().csrf().disable();
     }
 
     @Bean

@@ -23,4 +23,8 @@ public class UserService {
         return this.userDao.getUserByName(user);
     }
 
+    public User getUserById(Integer user){
+        return this.userDao.findById(user).get();
+    }
+
 }

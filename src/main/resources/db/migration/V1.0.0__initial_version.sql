@@ -22,7 +22,16 @@ create sequence seq_user;
 create table t_user
 (
     id               integer         not null  default nextval('seq_user'),
-    name             varchar(50)     not null,
+    name             varchar(50)     unique not null,
     password         varchar         not null,
     constraint pk_t_user primary key (id)
 );
+
+create table t_rented
+(
+    user_id         integer         not null,
+    book_id         integer         not null,
+    constraint pk_t_rented primary key (user_id, book_id),
+    constraint fk_t_rented_user foreign key (user_id) references t_user(id),
+    constraint fk_t_rented_book foreign key (book_id) references t_book(id)
+)

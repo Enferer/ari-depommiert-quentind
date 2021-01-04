@@ -22,10 +22,17 @@ public class AuthorService {
     }
 
     public Author createAuthor(Author author){
+        if(author.getFirstName() == null || author.getLastName() == null
+        || author.getLastName().equals("") || author.getFirstName().equals("")) return null;
         return this.authorDao.save(author);
     }
 
     public void deleteAuthor(Author author) {
-        this.authorDao.delete(author);
+        try{
+            this.authorDao.delete(author);
+        }catch (Exception e){
+
+        }
+
     }
 }
